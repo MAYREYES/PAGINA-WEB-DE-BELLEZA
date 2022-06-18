@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Ingresos vs Egresos</title>
+    <link rel="stylesheet" href="css/presupuesto.css" />
+  </head>
+  <body onload="cargarApp()">
+    <div class="cabecera">
+      <div class="presupuesto">
+        <div class="presupuesto_titulo">Presupuesto Disponible</div>
+        <div class="presupuesto_valor" id="presupuesto">+ 5,000.00</div>
+        <div class="presupuesto_ingreso limpiarEstilos">
+          <div class="presupuesto_ingreso--texto">Ingresos</div>
+          <div class="right">
+            <div class="presupuesto_ingreso--valor" id="ingresos">
+              + 3,000.00
+            </div>
+            <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+          </div>
+        </div>
+
+        <div class="presupuesto_egreso limpiarEstilos">
+          <div class="presupuesto_egreso--texto">Egresos</div>
+          <div class="right">
+            <div class="presupuesto_egreso--valor" id="egresos">- 1,000.00</div>
+            <div class="presupuesto_egreso--porcentaje" id="porcentaje">
+              40%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form id="form" onsubmit="return false">
+      <div class="agregar">
+        <div class="agregar_contenedor">
+          <!-- partde listas -->
+          <select class="agregar_tipo" id="tipo">
+            <option value="ingreso" selected>+</option>
+            <option value="egreso">-</option>
+          </select>
+          <input
+            type="text"
+            class="agregar_descripcion"
+            placeholder="Agregar descricpción"
+            id="descripcion"
+            required=""
+          />
+          <input
+            type="number"
+            class="agregar_valor"
+            placeholder="Agregar valor"
+            id="valor"
+            required=""
+          />
+          <button class="agregar_btn" onclick="agregarDato()">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="contenedor limpiarEstilos">
+      <div class="ingreso">
+        <h2 class="ingreso_titulo">Ingresos</h2>
+        <div id="lista_ingresos">
+          <div class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">Sueldo</div>
+            <div class="derecha limpiarEstilos">
+              <div class="elemento_valor">+ 5000.00</div>
+              <div class="elemento_eliminar">
+                <button class="elemento_eliminar-btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">venta de cremas</div>
+            <div class="derecha limpiarEstilos">
+              <div class="elemento_valor">+ 4000.00</div>
+              <div class="elemento_eliminar">
+                <button class="elemento_eliminar-btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">Venta de Maquillaje</div>
+            <div class="derecha limpiarEstilos">
+              <div class="elemento_valor">+ 2180.00</div>
+              <div class="elemento_eliminar">
+                <button class="elemento_eliminar-btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Egreso -->
+    <div class="contenedor1 limpiarEstilos">
+      <div class="egreso">
+        <h2 class="egreso_titulo">Egresos</h2>
+        <div id="lista_egresos">
+          <div class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">Internet</div>
+            <div class="derecha limpiarEstilos">
+              <div class="elemento_valor">- 500.00</div>
+              <div class="elemento_eliminar">
+                <button class="elemento_eliminar-btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">Provedores</div>
+            <div class="derecha limpiarEstilos">
+              <div class="elemento_valor">- 400.00</div>
+              <div class="elemento_eliminar">
+                <button class="elemento_eliminar-btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">pago luz</div>
+            <div class="derecha limpiarEstilos">
+              <div class="elemento_valor">- 2000.00</div>
+              <div class="elemento_eliminar">
+                <button class="elemento_eliminar-btn">
+                  <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="javascript/registro.js"></script>
+    <script src="javascript/ingreso.js"></script>
+    <script src="javascript/egreso.js"></script>
+    <script src="javascript/aplicacion.js"></script>
+  </body>
+</html>

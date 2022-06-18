@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingresar</title>
+    <link href="css/stylelogin.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="titulo">
+      <h1 id="titulo">Bienvenido</h1>
+    </div>
+    <img
+      src="https://previews.123rf.com/images/varka/varka1306/varka130600048/24537652-retrato-de-mujer-joven-y-bonita-en-vista-de-perfil-con-largo-cabello-hermoso-ilustraci%C3%B3n.jpg"
+      width="150px"
+      title="Logo de belleza"
+    />
+
+    <div class="formulario">
+      <form id="formulario">
+        Correo Electronico: <input type="text" id="name" />
+        <br />
+
+        Ingrese Contraseña: <input type="password" id="name" />
+      </form>
+    </div>
+
+    <center>
+      <button onclick="mostrarValores()">INGRESAR</button>
+    </center>
+
+    <script>
+      function mostrarValores() {
+        const formulario1 = document.forms["formulario"];
+        let texto = "";
+        for (item of formulario1) {
+          texto += item.value + " ";
+        }
+        console.log(texto);
+      }
+
+      const form1 = document.getElementById("formulario");
+      form1.addEventListener(
+        "focus",
+        (evento) => {
+          evento.target.style.background = "pink";
+        },
+        true
+      );
+
+      form1.addEventListener(
+        "blur",
+        (evento) => {
+          evento.target.style.background = "white";
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

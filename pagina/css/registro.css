@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(252, 61, 61, 0.836);
+}
+.container {
+  margin: 100px auto;
+  width: 300px;
+  padding: 30px;
+  background: red(0, 0, 0.5);
+  border-radius: 30px;
+}
+.container h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  font-size: 40px;
+  color: bisque;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.container .elemento label {
+  color: bisque;
+  font-size: larger;
+}
+.container .elemento input {
+  width: 100%;
+  padding: 5px 0;
+  color: rgb(245, 0, 171);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(0, 250, 208);
+  margin-bottom: 30px;
+}
+.container .elemento input[type="submit"] {
+  background-color: black;
+  border: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 15px;
+  margin-top: 10px;
+  font-size: medium;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.container .elemento input[type="submit"]:hover {
+  background-color: orange;
+}

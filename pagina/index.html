@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGINA DE BELLEZA</title>
+    <link rel="stylesheet" href="css/css.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"
+        >¡CURIOUS CUTIE!
+        <img src="imagenes/R (2).jpg" alt="Logo de pagina" />
+        <h2 id="encabezado"></h2>
+      </a>
+
+      <nav>
+        <a href="pagina1.html" class="nav-link">Tips</a>
+        <a href="CREDITOS.html" class="nav-link">Creditos</a>
+        <a href="presupuesto.html">Costos</a>
+        <a href="comentanos.html" class="nav-link">Opiniones</a>
+      </nav>
+    </header>
+
+    <div class="slider">
+      <ul>
+        <li>
+          <img src="imagenes/1.jpg" alt="" />
+        </li>
+        <li><img src="imagenes/piel.jpg" alt="" /></li>
+        <li>
+          <img src="imagenes/maxresdefault (1).jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+    <div class="texto">
+      <h1>¿QUÉ ES CURIOUS CUTIE?</h1>
+      <h3>
+        "Es una pagina web de tu belleza interior de unas chicas curiosas,
+        creada por DOS ALUMNAS MEXICANAS"
+      </h3>
+      <p id="parrafo1"></p>
+    </div>
+
+    <div class="registro">
+      <a href="registro.html">REGISTRO</a>
+      <a href="login.html">INGRESAR</a>
+    </div>
+
+    <script>
+      const encabezadoH1 = document.getElementById("encabezado");
+      //const { innerHTML } = encabezadoH1;
+      console.log(encabezadoH1);
+      console.log("INNER: " + encabezadoH1.innerHTML);
+      //console.log("Inner: " + innerHTML);
+      console.log("----------------");
+
+      const parrafoP1 = document.getElementById("parrafo1");
+      console.log("PARRAFO1: " + parrafoP1.innerHTML);
+      console.log(
+        `valor del encabezado: ${encabezadoH1.innerHTML} y el valor del parrafo 1 es: ${parrafo1.innerHTML}`
+      );
+      const parrafos = document.getElementsByTagName("p");
+      console.log(`numero de parrafos: ${parrafos.length}`);
+      for (let i = 0; i < parrafos.length; i++) {
+        console.log(
+          `en el parrafo ${i + 1} el valor es: ${parrafos[i].innerHTML}`
+        );
+      }
+
+      console.log("-------");
+    </script>
+  </body>
+</html>

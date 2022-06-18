@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.limpiarEstilos::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  color: #555;
+  font-family: sans-serif;
+  font-size: 16px;
+  position: relative;
+  height: 100vh;
+  font-weight: 400;
+  background-color: orange;
+}
+
+.right {
+  float: right;
+}
+
+.cabecera {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: #fff;
+  background: url(fondo.png), #69e511;
+  background: url(fondo.png),
+    -webkit-gradient(linear, right top, left top, from(#69e511), to(#0f5dee));
+}
+
+.presupuesto {
+  position: absolute;
+  width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.presupuesto_titulo {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.presupuesto_valor {
+  font-weight: 300;
+  font-size: 46px;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.presupuesto_ingreso,
+.presupuesto_egreso {
+  padding: 12px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: black;
+}
+
+.presupuesto_ingreso {
+  margin-bottom: 10px;
+  background-color: #46dd0f;
+}
+
+.presupuesto_egreso {
+  background-color: #ff5049;
+}
+
+.presupuesto_ingreso--texto,
+.presupuesto_egreso--texto {
+  float: left;
+  font-size: 13px;
+  color: #fff;
+  margin-top: 2px;
+}
+
+.presupuesto_ingreso--porcentaje,
+.presupuesto_egreso--porcentaje {
+  float: left;
+  width: 34px;
+  font-size: 11px;
+  padding: 3px 0;
+  margin-left: 10px;
+}
+
+.presupuesto_egreso--porcentaje {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 3px;
+}
+
+.agregar {
+  padding: 14px;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #f7f7f7;
+}
+
+.agregar_contenedor {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.agregar_tipo {
+  width: 55px;
+  border: 1px solid #e7e7e7;
+  height: 44px;
+  font-size: 18px;
+  color: inherit;
+  background-color: #fff;
+  margin-right: 10px;
+  font-weight: 300;
+  transition: border 0.3s;
+}
+
+.agregar_descripcion,
+.agregar_valor {
+  border: 1px solid #e7e7e7;
+  background-color: #fff;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.agregar_btn {
+  font-size: 35px;
+  background: none;
+  border: none;
+  color: #41e00c;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.1;
+  margin-left: 10px;
+}
+
+.contenedor {
+  width: 860px;
+  margin: 60px auto;
+}
+
+.ingreso {
+  float: left;
+  width: 370px;
+  margin-right: 70px;
+}
+
+.h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+/* PARTE DE INGRESO */
+.ingreso_titulo {
+  color: blue;
+}
+
+.elemento {
+  padding: 13px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.elemento:first-child {
+  border-top: 1px solid #e7e7e7;
+}
+.elemento:nth-child(even) {
+  background-color: #e7e7e7;
+}
+
+.elemento_descripcion {
+  float: left;
+}
+
+.elemento_valor {
+  float: left;
+  transition: 0.3s;
+}
+
+.ingreso .elemento_valor,
+.ingreso .elemento_eliminar-btn {
+  color: black;
+}
+
+.elemento_eliminar {
+  float: left;
+}
+
+.elemento_eliminar-btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+
+.contenedor1 {
+  width: 860px;
+  margin: 60px auto;
+}
+
+.egreso {
+  float: left;
+  width: 370px;
+  margin-right: 70px;
+}
+
+.egreso_titulo {
+  color: blue;
+}
+
+.egreso .elemento_valor,
+.egreso .elemento_eliminar-btn {
+  color: black;
+}
+
+.elemento_eliminar-btn:focus {
+  outline: none;
+}
+.elemento_eliminar-btn:active {
+  transform: translateY(2px);
+}
+
+.elemento:hover .elemento_eliminar-btn {
+  display: block;
+}
+.elemento:hover .elemento_valor {
+  transform: translateX(-20px);
+}

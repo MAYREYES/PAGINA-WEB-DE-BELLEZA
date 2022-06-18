@@ -1,0 +1,57 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+.titulo {
+  margin: 0 0 30px;
+  padding: 0;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.formulario {
+  margin: 100px auto;
+  width: 400px;
+  padding: 30px;
+  background: red(0, 0, 0.5);
+  border-radius: 50px;
+  text-align: center;
+  background-color: orange;
+}
+.formulario input {
+  width: 90%;
+  padding: 5px 0;
+  color: black;
+  text-align: center;
+  border: none;
+  background-color: white;
+  margin-bottom: 10px;
+}
+button {
+  width: 190px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 700;
+}
+button:hover {
+  background-color: orange;
+}
+img {
+  display: block;
+  margin: auto;
+}
